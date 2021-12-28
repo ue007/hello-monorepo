@@ -6,7 +6,7 @@
     ],
     "engines": {
         "node": ">=10.15.0",
-        "yarn": ">=1.5.1 <=1.18.0"
+        "yarn": ">=1.5.1"
     },
     "scripts": {
         "bootstrap": "lerna bootstrap --use-workspaces",
@@ -17,7 +17,7 @@
         "lint:js": "eslint . --ext .js --ignore-pattern lib --ignore-pattern node_modules",
         "lint:styles": "stylelint './packages/**/*.js'",
         "lint": "yarn lint:js && yarn lint:styles",
-        "now-build": "build-storybook -c .storybook -o public",
+        "now-build": "build-storybook -c .storybook -o docs",
         "prettier": "prettier --write \"**/*.{js,json,md,yml}\"",
         "lerna-publish": "lerna publish",
         "test": "yarn build && yarn lint && yarn coverage",
